@@ -360,6 +360,18 @@ button {
   background-color: #D64545;
 }
 
+.section-title-deco::after {
+  display: block;
+  top: 0;
+  -webkit-transform: translateX(27px);
+          transform: translateX(27px);
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background-color: #D64545;
+  content: "";
+}
+
 @media (min-width: 1024px) {
   .section-title-deco {
     width: 40px;
@@ -371,18 +383,6 @@ button {
     width: 6px;
     height: 6px;
   }
-}
-
-.section-title-deco::after {
-  display: block;
-  top: 0;
-  -webkit-transform: translateX(27px);
-          transform: translateX(27px);
-  width: 2px;
-  height: 2px;
-  border-radius: 50%;
-  background-color: #D64545;
-  content: "";
 }
 
 .section-title-en {
