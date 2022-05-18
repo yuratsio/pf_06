@@ -216,15 +216,6 @@ button {
     margin-bottom: 8px;
     border-radius: 2px;
     background-color: $mainred;
-    @include mq(lg) {
-      width: 40px;
-      height: 4px;
-      &::after {
-        transform: translateX(44px);
-        width: 6px;
-        height: 6px;
-      }
-    }
     &::after {
       display: block;
       top: 0;
@@ -234,6 +225,15 @@ button {
       border-radius: 50%;
       background-color: $mainred;
       content: "";
+    }
+    @include mq(lg) {
+      width: 40px;
+      height: 4px;
+      &::after {
+        transform: translateX(44px);
+        width: 6px;
+        height: 6px;
+      }
     }
   }
   &-en {
