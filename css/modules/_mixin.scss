@@ -1,0 +1,39 @@
+@mixin mq($breakpoint) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin rc() {
+  @media print, (prefers-reduced-motion: reduce) {
+    @content;
+  };
+} ;
+
+@keyframes kf-mainvisual {
+  0% {
+    transform: none;
+    opacity: .3;
+  }
+  10% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 1;
+    // transform: scale(1.1);
+  }
+  40% {
+    opacity: 0;
+    transform: scale(1.15);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.15);
+  }
+}
+
+@mixin rc() {
+  @media print, (prefers-reduced-motion: reduce) {
+    @content
+  }
+}
