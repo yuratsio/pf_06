@@ -69,6 +69,26 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
   // =============================
+  // fade-in
+  // =============================
+  const fadeInTargets = document.querySelectorAll('.js-fade-in');
+  const fadeInObs = new IntersectionObserver(fadeIn);
+
+  fadeInTargets.forEach(fadeInTarget => {
+    fadeInObs.observe(fadeInTarget);
+  });
+
+  function fadeIn(entries, obs) {
+    entries.forEach(entry => {
+      if(!entry.isIntersecting) {
+        return;
+      };
+      entry.target.classList.add('js-fade-in--active');
+      obs.unobserve(entry.target);
+    });
+  }
+
+  // =============================
   // resize
   // =============================
   window.addEventListener('resize', () => {
