@@ -1,4 +1,17 @@
-const swiper = new Swiper('.swiper', {
+const swiperReport = new Swiper('.feature__swiper', {
+  // Optional parameters
+  loop: true,
+  slidesPerView: 1.5,
+  centeredSlides: true,
+  gap: 32,
+  breakpoints: {
+    768: {
+      slidesPerView: 3,
+    }
+  },
+});
+
+const swiper = new Swiper('.recipe__container', {
   // Optional parameters
   loop: true,
   slidesPerView: 1.5,
