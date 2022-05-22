@@ -1,0 +1,25 @@
+.js-fade-in {
+  & > .fade-in-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: transform 1s ease-out, opacity 1s ease-out;
+    @include rc() {
+      transition: transform 1s ease-out, opacity 1s ease-out !important;
+    }
+  }
+  &--active {
+    & > .fade-in-item {
+      opacity: 1;
+      transform: none;
+      @for $i from 1 through 10 {
+        &:nth-child(#{$i}) {
+          transition-delay: $i * 0.2s;
+
+          @include rc() {
+            transition-delay: $i * 0.2s !important;
+          }
+        }
+      }
+    }
+  }
+}
