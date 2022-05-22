@@ -3,9 +3,13 @@ const swiperReport = new Swiper('.feature__swiper', {
   loop: true,
   slidesPerView: 1.5,
   centeredSlides: true,
-  gap: 32,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false
+  },
   breakpoints: {
     768: {
+      autoplay: false,
       slidesPerView: 3,
     }
   },
