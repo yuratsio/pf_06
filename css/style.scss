@@ -1,6 +1,7 @@
 @import "modules/variables";
 @import "modules/breakpoints";
 @import "modules/mixin";
+@import "modules/fade-in";
 
 // =============================
 // common
@@ -695,38 +696,16 @@ button {
   }
   &__inner {
     position: relative;
-
-    @include mq(lg) {
-      min-height: 247px;
-    }
+  }
+  &__text-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
   }
   &__title {
     font-weight: bold;
-    font-size: 1.8rem;
-
+    font-size: 2rem;
     @include mq(md) {
-      transform: translateY(4px);
-      margin-left: 336px;
-    }
-
-    @include mq(lg) {
-      margin-left: 440px;
-      font-size: 2.4rem;
-    }
-  }
-  &__img-wrapper {
-    height: 100%;
-    margin-top: 16px;
-    @include mq(md) {
-      position: absolute;
-      top: 0;
-      width: 320px;
-      margin: 0;
-    }
-
-    @include mq(lg) {
-      width: 400px;
-      height: auto;
+      font-size: 2.8rem;
     }
   }
   &__text {
@@ -734,25 +713,53 @@ button {
     font-weight: 500;
     font-size: 1.4rem;
     @include mq(md) {
-      margin-left: 336px;
-    }
-
-    @include mq(lg) {
-      margin-left: 440px;
       font-size: 1.6rem;
     }
   }
-  &__btn {
-    margin: 40px auto 0;
-
+  &__swiper {
+    max-width: 1240px;
+    margin-top: 32px;
     @include mq(md) {
-      margin-left: 336px;
+      margin-top: 40px;
     }
-
     @include mq(lg) {
-      position: absolute;
-      bottom: 0;
-      margin-left: 440px;
+      margin-top: 48px;
+    }
+  }
+  &__swiper-item {
+    padding: 0 20px;
+    &:hover {
+      & .feature__swiper-img {
+        transform: scale(1.15);
+      }
+    }
+  }
+  &__swiper-img-wrapper {
+    overflow: hidden;
+  }
+  &__swiper-img {
+    transition: transform .3s ease;
+  }
+  &__swiper-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-top: 16px;
+    @include mq(md) {
+      font-size: 2rem
+    }
+  }
+  &__swiper-text {
+    font-size: 1.4rem;
+    margin-top: 4px;
+    @include mq(md) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__btn {
+    margin: 24px auto 0;
+    @include mq(md) {
+      margin-top: 48px;
     }
   }
 }
