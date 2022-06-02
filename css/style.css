@@ -268,8 +268,8 @@ button {
   position: fixed;
   right: 20px;
   bottom: 36px;
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   background-color: #221714;
   color: white;
@@ -1218,7 +1218,6 @@ button {
 
 .fv__maincopy-title .upper {
   font-size: 3rem;
-  letter-spacing: 0.1em;
 }
 
 @media not all and (min-width: 375px) {
@@ -1230,7 +1229,6 @@ button {
 @media (min-width: 1024px) {
   .fv__maincopy-title .upper {
     font-size: 4.2rem;
-    letter-spacing: 0.12em;
   }
 }
 
