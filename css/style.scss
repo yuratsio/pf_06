@@ -622,11 +622,10 @@ button {
     position: absolute;
     top: 64px;
     width: 100%;
-    padding-left: 10px;
+    padding-left: 20px;
     color: white;
     @include mq(md) {
       top: 50%;
-      padding-left: 20px;
       transform: translateY(-50%);
     }
 
@@ -641,22 +640,14 @@ button {
   }
   &__maincopy-title {
     font-weight: bold;
-    font-size: 2.2rem;
+    font-size: 2rem;
     letter-spacing: 0.096em;
-
-    @include mq(xs) {
-      font-size: 2rem;
-    }
 
     @include mq(lg) {
       font-size: 3.2rem;
     }
     & .upper {
-      font-size: 3rem;
-
-      @include mq(xs) {
-        font-size: 2.6rem;
-      }
+      font-size: 2.6rem;
 
       @include mq(lg) {
         font-size: 4.2rem;
